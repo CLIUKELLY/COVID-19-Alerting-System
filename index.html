@@ -21,26 +21,26 @@
 
 <div id="container" class="row justify-content-center">
     <div id="body" class="col-8">
-        <div class="card bg-light" style="width: 100%;">
-            <div class="row justify-content-center">
+        <div class="container" style="width: 100%; background-color: #e3f2fd;">
+            <div class="row justify-content-center mb-3">
                 <img src="Image/img_userProfile.png" alt="Profile Picture" class="col-5">
             </div>
 
-            <div id="loginForm ">
-                <div class="mb-3">
-                    <label for="uname" class="form-label"><b>Username</b></label>
-                    <div class="input">
+            <div id="loginForm">
+                <div class="row mb-3">
+                    <label for="uname" class="col-sm-3 col-form-label"><b>Username</b></label>
+                    <div class="input col-sm-9">
                         <input class="val form-control" value="" id="username" type="text" placeholder="Enter Medicare Card Number" name="uname" required>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="psw" class="form-label"><b>Password</b></label>
-                    <div class="input">
+                <div class="row mb-3">
+                    <label for="psw" class="col-sm-3 col-form-label"><b>Password</b></label>
+                    <div class="input col-sm-9">
                         <input class="val form-control" value="" id="password" type="password" placeholder="Enter Password" name="psw" required>
                     </div>
                 </div>
-                <div class="col-12">
-                    <button type="submit" id="login" class="btn btn-primary">Login</button>
+                <div class="col-8">
+                    <button id="login" class="btn btn-primary col-sm-3">Login</button>
                 </div>
             </div>
         </div>
