@@ -16,18 +16,19 @@
         <p class="text-center fs-1 fw-bold text-white ">WELCOME TO</p>
         <p class="text-center fs-2 fw-bold text-white ">COVID-19 Public Health Care System</p>
     </div>
+
 </body>
 
-<div id="container">
+<div id="container" class="row justify-content-center">
 
-    <body id="body">
+    <div id="body" class="col-5">
         <div id="loginForm">
             <div class="form">
-                <div class="imgcontainer">
-                    <img src="Image/img_userProfile.png" alt="Profile Picture" class="user">
-                </div>
+                <div class="card" style="width: 20rem;">
+                    <div class="imgcontainer">
+                        <img src="Image/img_userProfile.png" alt="Profile Picture" class="user ">
+                    </div>
 
-                <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <div class="input">
                         <input class="val" value="" id="username" type="text" placeholder="Enter Medicare Card Number" name="uname" required>
@@ -38,14 +39,19 @@
                         <input class="val" value="" id="password" type="password" placeholder="Enter Password" name="psw" required>
                     </div>
 
-                    <button id="login">Login</button>
-                    <label>
-                    <input type="checkbox" id="remember" name="remember"> Remember me
-                  </label>
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" id="cancel" class="cancelbtn">Cancel</button>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <button id="login">Login</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" id="cancel" class="cancelbtn">Cancel</button>
+                        </div>
+                        <div class="col">
+                            <label>
+                                <input type="checkbox" id="remember" name="remember"> Remember me
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,7 +155,7 @@
                 $('#remember').prop('checked', false);
             })
         </script>
-    </body>
+    </div>
 </div>
 
 
