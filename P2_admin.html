@@ -40,7 +40,7 @@
         </nav>
     -->
     <!--备选二-->
-    <div class="container-fluid">
+    <div class="container-fluid bg-light">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="person-tab" data-bs-toggle="tab" data-bs-target="#person" type="button" role="tab" aria-controls="person" aria-selected="true">Person</button>
@@ -63,6 +63,27 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="person" role="tabpanel" aria-labelledby="person-tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ppl_id</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
                     <button class="btn-delete">Delete</button>
