@@ -20,59 +20,39 @@
 </body>
 
 <div id="container" class="row justify-content-center">
+    <div id="body" class="col-8">
+        <div class="card bg-light" style="width: 100%;">
+            <div class="row justify-content-center">
+                <img src="Image/img_userProfile.png" alt="Profile Picture" class="col-5">
+            </div>
 
-    <div id="body" class="col-5">
-        <div id="loginForm">
-            <div class="form">
-                <div class="card" style="width: 20rem;">
-                    <div class="imgcontainer">
-                        <img src="Image/img_userProfile.png" alt="Profile Picture" class="user ">
-                    </div>
-
-                    <label for="uname"><b>Username</b></label>
+            <div id="loginForm">
+                <div class="mb-3">
+                    <label for="uname" class="form-label"><b>Username</b></label>
                     <div class="input">
-                        <input class="val" value="" id="username" type="text" placeholder="Enter Medicare Card Number" name="uname" required>
+                        <input class="val form-control" value="" id="username" type="text" placeholder="Enter Medicare Card Number" name="uname" required>
                     </div>
-
-                    <label for="psw"><b>Password</b></label>
+                </div>
+                <div class="mb-3">
+                    <label for="psw" class="form-label"><b>Password</b></label>
                     <div class="input">
-                        <input class="val" value="" id="password" type="password" placeholder="Enter Password" name="psw" required>
+                        <input class="val form-control" value="" id="password" type="password" placeholder="Enter Password" name="psw" required>
                     </div>
+                </div>
 
-                    <div class="row align-items-start">
-                        <div class="col">
-                            <button id="login">Login</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" id="cancel" class="cancelbtn">Cancel</button>
-                        </div>
-                        <div class="col">
-                            <label>
-                                <input type="checkbox" id="remember" name="remember"> Remember me
-                            </label>
-                        </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button type="submit" id="login" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous "></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
         <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
         <script>
             var username = $('#username');
             var password = $('#password');
-
-            // Check if localStorage has some data in it
-            if (JSON.parse(localStorage.getItem('remember')) == 'checked') {
-                $('#remember').attr('checked', 'checked');
-                if (JSON.parse(localStorage.getItem('username')) != null) {
-                    $('#username').val(JSON.parse(localStorage.getItem('username')));
-                }
-                if (JSON.parse(localStorage.getItem('password')) != null) {
-                    $('#password').val(JSON.parse(localStorage.getItem('password')));
-                }
-            }
 
             // Login
             $('#login').click(function() {
@@ -107,52 +87,6 @@
                         }
                     }
                 })
-            })
-
-            //remember
-            $('#remember').click(function(e) {
-                    if (username.val() == '') {
-                        alert('Enter one user name,please!');
-                        e.preventDefault();
-                        return;
-                    }
-                    if (password.val() == '') {
-                        alert('Enter one user password,please!');
-                        e.preventDefault();
-                        return;
-                    }
-                    // console.log($('#remember').prop('checked'));
-                    if ($('#remember').attr('checked') != 'checked') {
-                        console.log(1);
-                        setStorage();
-                    } else {
-                        console.log(2);
-                        clearStorage();
-                    }
-                })
-                // Save in LocalStrage
-            function setStorage() {
-                $('#remember').attr('checked', 'checked');
-                // console.log($('#remember').prop('checked'));
-                localStorage.setItem('username', JSON.stringify($('#username').val()));
-                localStorage.setItem('password', JSON.stringify($('#password').val()));
-                localStorage.setItem('remember', JSON.stringify('checked'));
-            }
-            // Remove Local Strage
-            function clearStorage() {
-                $('#remember').attr('checked', '');
-                // console.log($('#remember').prop('checked'));
-                localStorage.setItem('username', JSON.stringify($('#username').val('')));
-                localStorage.setItem('password', JSON.stringify($('#password').val('')));
-                localStorage.setItem('remember', JSON.stringify(''));
-            }
-
-            // Cancel
-            $('#cancel').click(function() {
-                username.val('');
-                password.val('');
-                clearStorage();
-                $('#remember').prop('checked', false);
             })
         </script>
     </div>
