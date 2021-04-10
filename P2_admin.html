@@ -21,11 +21,11 @@
         <!--Banner-->
         <div class="header">
             <br>
-            <h1>WELCOME TO</h1>
+            <!--<h1>WELCOME TO</h1>-->
             <h2>
-                <I>Request Management System</I>
+                <I>COVID-19 Public Health Care System</I>
                 <br>
-                <I>Product Manager</I>
+                <I>Administrator Home</I>
             </h2>
 
 
@@ -34,9 +34,12 @@
         <!--Navigation Bar-->
 
         <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="P2_requests_manager.html">Requests</a>
-            <a href="P6_calendar.html">Calendar</a>
+            <a>Person</a>
+            <a>Public Health Worker</a>
+            <a>Facility</a>
+            <a>Region</a>
+            <a>Group Zone</a>
+            <a>Health Recommendation</a>
         </div>
 
 
@@ -48,7 +51,7 @@
 
                 <div class="col-1 col-t-1 col-p-1">
                     <!-------------------------------------------------
-                        Request List
+                        Table to show attributes and tuples
                      ------------------------------------------------->
                     <div class="shopping-cart">
                         <br>
@@ -88,42 +91,17 @@
                             </tr>
                         </table>
 
-                        <!-- </form> -->
-
 
                     </div>
                 </div>
-                <div class="col-2 col-t-2 col-p-2">
 
-
-                    <!-------------------------------------------------
-                  Request Summary
-            --------------------------------------------------->
-
-                    <div class="cart-summary">
-                        <div class="cart-summary-container">
-                            <h4 style="padding: 10px 0;">Active Request Quantity
-                                <span class="price" style="color:black">
-									<i class="fa fa-shopping-cart"></i> 
-									<p class="shoppingCartTotalItems">{{summary}}</p> 
-								</span>
-                            </h4>
-                            <hr style="margin-bottom: 10px;">
-                            <p style="padding: 4px 0;" v-for="(item,d) in summaryList" :key="d">{{item.name}}<span class="price QST" style="color:rgb(75, 73, 73)"><b>{{item.value}}</b></span></p>
-
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
-            <!-- 	<div class="continue-shopping col-1 col-t-1 col-p-1">
-				<div class="summary">
-					summary:{{summary}}
-				</div>
-			</div> -->
-            <div class="continue-shopping col-1 col-t-1 col-p-1">
-                <button onclick="location.href='P3_requests_fill.html?type=manager'" class="btn-continueShopping">Make Request</button>
+
+            <div class="button col-1 col-t-1 col-p-1">
+                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                <button class="btn-delete">Delete</button>
+                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
                 <ul class="page">
                     <li class="btn pre" @click="previous()" :class="page==1?'active':''">Previous</li>
                     <li class="btn num" :class="currentIndex==c?'on':''" v-for="(item,c) in totalSize" @click="changePage(c)" :key="c">{{c+1}}</li>
@@ -286,7 +264,7 @@
                     // Search key words
                     search() {
                         if (this.keyword == '') {
-                            alert('请输入关键字');
+                            alert('Please type in key words');
                             return;
                         }
                         this.page = 1;

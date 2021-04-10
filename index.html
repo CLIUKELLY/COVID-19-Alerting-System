@@ -22,21 +22,19 @@
             <br>
             <h1>WELCOME TO</h1>
             <h2>
-                <I>Request Management System</I>
+                <I>COVID-19 Public Health Care System</I>
             </h2>
 
 
         </div>
 
-        <!--Navigation Bar-->
-
+        <!------------------------------
+        //Navigation Bar
+        
         <div class="navbar">
             <a href="index.html">Home</a>
-            <a href="#">Requests</a>
-            <a href="#">Calendar</a>
-
         </div>
-
+        -------------------------------->
 
         <!-------------------------------------------------
             Main content section
@@ -53,7 +51,7 @@
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <div class="input">
-                        <input class="val" value="" id="username" type="text" placeholder="Enter Email" name="uname" required>
+                        <input class="val" value="" id="username" type="text" placeholder="Enter Medicare Card Number" name="uname" required>
                     </div>
 
                     <label for="psw"><b>Password</b></label>
@@ -100,11 +98,11 @@
             // Login
             $('#login').click(function() {
                 if (username.val() == '') {
-                    alert('Enter a user name,please!');
+                    alert('Enter your Medicare Card Number, please!');
                     return;
                 }
                 if (password.val() == '') {
-                    alert('Enter a user password,please!');
+                    alert('Enter your password, please!');
                     return;
                 }
                 $.ajax({
