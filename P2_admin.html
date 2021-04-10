@@ -117,8 +117,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
     <script>
-        const regTime = /[0-9\-]{10}/g;
-        const regDate = /\d{2}[:]\d{2}[:]\d{2}/g;
+        //const regTime = /[0-9\-]{10}/g;
+        //const regDate = /\d{2}[:]\d{2}[:]\d{2}/g;
         new Vue({
             el: '#container',
             data: {
@@ -177,148 +177,6 @@
                 this.getSummaryData()
             },
             methods: {
-                // Go to previous page
-                previous() {
-                    if (this.page <= 1) return;
-                    this.page--;
-                    this.initData();
-                    this.currentIndex = this.page - 1;
-                },
-                // Go to next page
-                next() {
-                    if (this.page == this.totalSize) return;
-                    this.page++;
-                    this.initData();
-                    this.currentIndex = this.page;
-                    this.currentIndex = this.page - 1;
-                },
-                // Go to page with index of
-                changePage(index) {
-                    let current = index + 1;
-                    this.currentIndex = index;
-                    this.page = current;
-                    this.initData();
-                },
-                // To sort all the objects in vue
-                sort(index, item) {
-                    this.headList[index].isAsc = !this.headList[index].isAsc;
-                    $.ajax({
-                        url: proBaseUrl + 'info/sort',
-                        data: {
-                            id: JSON.parse(localStorage.getItem('userManager')).id,
-                            type: JSON.parse(localStorage.getItem('userManager')).user_jobPosition,
-                            page: this.page,
-                            limit: this.size,
-                            attr: item.type,
-                            isAsc: item.isAsc
-                        },
-                        success: (res) => {
-                            if (res.code == 0) {
-                                this.bodyList = [];
-                                this.totalSize = Math.ceil(res.count / this.size);
-                                res.data.forEach((item, index) => {
-                                    item.time = item.create_time.replace(regTime, '');
-                                    item.date = (item.create_time.replace(regDate, '')).replace(/[-]/g, '/');
-                                })
-                                this.bodyList = res.data;
-                            } else {
-
-                            }
-                        }
-                    })
-                },
-                // increase the piorioty level
-                reduce(index, id) {
-                    if (this.bodyList[index].piority < 1) {
-                        alert('不能再少了~');
-                        return;
-                    };
-                    this.bodyList[index].piority--;
-                    this.count(id, 'reduce');
-                },
-                // reduce the piority level
-                add(index, id) {
-                    this.bodyList[index].piority++;
-                    this.count(id, 'add');
-                },
-                // calculate
-                count(id, type) {
-                    $.ajax({
-                        url: proBaseUrl + 'info/add',
-                        data: {
-                            id: id,
-                            type: type
-                        },
-                        success: (res) => {
-                            if (res.code == 0) {
-                                console.log(res.msg);
-                            } else {
-                                console.log(res.msg);
-                            }
-                        }
-                    })
-                },
-                // Search key words
-                search() {
-                    if (this.keyword == '') {
-                        alert('Please type in key words');
-                        return;
-                    }
-                    this.page = 1;
-                    let that = this;
-                    $.ajax({
-                        url: proBaseUrl + 'info/search',
-                        data: {
-                            id: JSON.parse(localStorage.getItem('userManager')).id,
-                            type: JSON.parse(localStorage.getItem('userManager')).user_jobPosition,
-                            page: this.page,
-                            limit: this.size,
-                            keyword: that.keyword
-                        },
-                        success: (res) => {
-                            if (res.code == 0) {
-                                if (this.keyword) {
-                                    this.bodyList = [];
-                                }
-                                res.data.forEach((item, index) => {
-                                    item.time = item.create_time.replace(regTime, '');
-                                    item.date = (item.create_time.replace(regDate, '')).replace(/[-]/g, '/');
-                                })
-                                this.bodyList = res.data;
-                                this.totalSize = Math.ceil(res.count / this.size);
-                            } else {
-                                this.bodyList = [];
-                                this.totalSize = Math.ceil(res.count / this.size);
-                            }
-                        }
-                    })
-                },
-                // Monitor the textbox for search to see if it's empty
-                watchInput(e) {
-                    if (this.keyword == '') {
-                        this.initData();
-                    }
-                },
-                // To get summary board info
-                getSummaryData() {
-                    $.ajax({
-                        url: proBaseUrl + 'info/summary',
-                        data: {
-                            id: JSON.parse(localStorage.getItem('userManager')).id,
-                            type: JSON.parse(localStorage.getItem('userManager')).user_jobPosition,
-                        },
-                        success: (res) => {
-                            if (res.code == 0) {
-                                res.data.forEach((item) => {
-                                    this.summary += item.value;
-                                    this.summaryList.push(item);
-                                })
-                            } else {
-
-                            }
-                        }
-                    })
-                },
                 // Initialize data
                 initData() {
                     $.ajax({
