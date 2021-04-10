@@ -9,9 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
-<!-------------------------------------------------
-    Container: contains Header, content, footer
---------------------------------------------------->
 
 <body style="background-color: #e3f2fd;">
     <!------------------------------
@@ -43,76 +40,79 @@
         </nav>
     -->
     <!--备选二-->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="person-tab" data-bs-toggle="tab" data-bs-target="#person" type="button" role="tab" aria-controls="person" aria-selected="true">Person</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="public-health-worker-tab" data-bs-toggle="tab" data-bs-target="#public-health-worker" type="button" role="tab" aria-controls="public-health-worker" aria-selected="false">Public Health Worker</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="facility-tab" data-bs-toggle="tab" data-bs-target="#facility" type="button" role="tab" aria-controls="facility" aria-selected="false">Facility</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="region-tab" data-bs-toggle="tab" data-bs-target="#region" type="button" role="tab" aria-controls="region" aria-selected="false">Region</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="group-zone-tab" data-bs-toggle="tab" data-bs-target="#group-zone" type="button" role="tab" aria-controls="group-zone" aria-selected="false">Group Zone</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="health-recommendation-tab" data-bs-toggle="tab" data-bs-target="#health-recommendation" type="button" role="tab" aria-controls="health-recommendation" aria-selected="false">Health Recommendation</button>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="person" role="tabpanel" aria-labelledby="person-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="person-tab" data-bs-toggle="tab" data-bs-target="#person" type="button" role="tab" aria-controls="person" aria-selected="true">Person</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="public-health-worker-tab" data-bs-toggle="tab" data-bs-target="#public-health-worker" type="button" role="tab" aria-controls="public-health-worker" aria-selected="false">Public Health Worker</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="facility-tab" data-bs-toggle="tab" data-bs-target="#facility" type="button" role="tab" aria-controls="facility" aria-selected="false">Facility</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="region-tab" data-bs-toggle="tab" data-bs-target="#region" type="button" role="tab" aria-controls="region" aria-selected="false">Region</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="group-zone-tab" data-bs-toggle="tab" data-bs-target="#group-zone" type="button" role="tab" aria-controls="group-zone" aria-selected="false">Group Zone</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="health-recommendation-tab" data-bs-toggle="tab" data-bs-target="#health-recommendation" type="button" role="tab" aria-controls="health-recommendation" aria-selected="false">Health Recommendation</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="person" role="tabpanel" aria-labelledby="person-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="public-health-worker" role="tabpanel" aria-labelledby="public-health-worker-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+            <div class="tab-pane fade" id="public-health-worker" role="tabpanel" aria-labelledby="public-health-worker-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="facility" role="tabpanel" aria-labelledby="facility-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+            <div class="tab-pane fade" id="facility" role="tabpanel" aria-labelledby="facility-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="region" role="tabpanel" aria-labelledby="region-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+            <div class="tab-pane fade" id="region" role="tabpanel" aria-labelledby="region-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="group-zone" role="tabpanel" aria-labelledby="group-zone-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+            <div class="tab-pane fade" id="group-zone" role="tabpanel" aria-labelledby="group-zone-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
-        </div>
-        <div class="tab-pane fade" id="health-recommendation" role="tabpanel" aria-labelledby="health-recommendation-tab">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
-                <button class="btn-delete">Delete</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
-                <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+            <div class="tab-pane fade" id="health-recommendation" role="tabpanel" aria-labelledby="health-recommendation-tab">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="location.href='P3_fill_form.html'" class="btn-create">Create</button>
+                    <button class="btn-delete">Delete</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-display">Display</button>
+                    <button onclick="location.href='P4_detailed_info.html'" class="btn-edit">Edit</button>
+                </div>
             </div>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
