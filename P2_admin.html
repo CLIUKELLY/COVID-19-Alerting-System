@@ -92,33 +92,33 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_fname">First name:</label><br>
-                            <input type="text" class="mb-3" id="ppl_fname" name="ppl_fname"><br>
+                            <input type="text" required class="mb-3" id="ppl_fname" name="ppl_fname"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_lname">Last name:</label><br>
-                            <input type="text" class="mb-3" id="ppl_lname" name="ppl_lname"><br>
+                            <input type="text" required class="mb-3" id="ppl_lname" name="ppl_lname"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_gender">Gender:</label><br>
-                            <input type="text" class="mb-3" id="ppl_gender" name="ppl_gender" placeholder="M/F" pattern="[M|F]"><br>
+                            <input type="text" required class="mb-3" id="ppl_gender" name="ppl_gender" placeholder="M/F" pattern="[M|F]"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_dob">Date of Birth:</label><br>
-                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
+                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob"><br>
                         </div>
                     </div>
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_citizenship">Citizenship:</label><br>
-                            <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
+                            <input type="text" required class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_medNum">Medicare Number:</label><br>
-                            <input type="text" class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
+                            <input type="text" required class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_telNum">Tel:</label><br>
-                            <input type="text" class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
+                            <input type="text" required class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_email">Email:</label><br>
@@ -140,19 +140,19 @@
                 <h2>Delete a Person</h2>
                 <form class="mb-3">
                     <label for="ppl_id">Person ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="ppl_id" name="ppl_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Display a Person</h2>
                 <form class="mb-3">
                     <label for="ppl_id">Person ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="ppl_id" name="ppl_id">
                     <button class="btn-display">Display</button>
                 </form>
                 <h2>Edit a Person</h2>
                 <form class="mb-3">
                     <label for="ppl_id">Person ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="ppl_id" name="ppl_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -162,27 +162,27 @@
                 <h2>Create a Public Health Worker</h2>
                 <form class="mb-3">
                     <label for="ppl_id">Person ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id"><br>
+                    <input type="number" required class="mb-3" id="ppl_id" name="ppl_id"><br>
                     <label for="employee_id">Employee ID:</label><br>
-                    <input type="text" class="mb-3" id="employee_id" name="employee_id"><br>
+                    <input type="text" required class="mb-3" id="employee_id" name="employee_id"><br>
                     <button class="btn-create">Create</button>
                 </form>
                 <h2>Delete a Public Health Worker</h2>
                 <form class="mb-3">
                     <label for="employee_id">Employee ID:</label><br>
-                    <input type="number" class="mb-3" id="employee_id" name="employee_id">
+                    <input type="number" required class="mb-3" id="employee_id" name="employee_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Display a Public Health Worker</h2>
                 <form class="mb-3">
                     <label for="employee_id">Employee ID:</label><br>
-                    <input type="number" class="mb-3" id="employee_id" name="employee_id">
+                    <input type="number" required class="mb-3" id="employee_id" name="employee_id">
                     <button class="btn-display">Display</button>
                 </form>
                 <h2>Edit a Public Health Worker</h2>
                 <form class="mb-3">
                     <label for="employee_id">Employee ID:</label><br>
-                    <input type="number" class="mb-3" id="employee_id" name="employee_id">
+                    <input type="number" required class="mb-3" id="employee_id" name="employee_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -194,11 +194,11 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="phf_id">Facility ID:</label><br>
-                            <input type="text" class="mb-3" id="phf_id" name="phf_id"><br>
+                            <input type="text" required class="mb-3" id="phf_id" name="phf_id"><br>
                         </div>
                         <div class="col">
                             <label for="phf_phoneNum">Tel:</label><br>
-                            <input type="text" class="mb-3" id="phf_phoneNum" name="phf_phoneNum"><br>
+                            <input type="text" required class="mb-3" id="phf_phoneNum" name="phf_phoneNum"><br>
                         </div>
                         <div class="col">
                             <label for="phf_webAddress">Web Address:</label><br>
@@ -206,21 +206,21 @@
                         </div>
                         <div class="col">
                             <label for="phf_type">Facility Type:</label><br>
-                            <input type="text" class="mb-3" id="phf_type" name="phf_type"><br>
+                            <input type="text" required class="mb-3" id="phf_type" name="phf_type"><br>
                         </div>
                     </div>
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="phf_name">Facility Name:</label><br>
-                            <input type="text" class="mb-3" id="phf_name" name="phf_name"><br>
+                            <input type="text" required class="mb-3" id="phf_name" name="phf_name"><br>
                         </div>
                         <div class="col">
                             <label for="phf_pcrDriveThru">PCR Drive Thru:</label><br>
-                            <input type="int" class="mb-3" id="phf_pcrDriveThru" name="phf_pcrDriveThru"><br>
+                            <input type="int" required class="mb-3" id="phf_pcrDriveThru" name="phf_pcrDriveThru"><br>
                         </div>
                         <div class="col">
                             <label for="phf_visitWay">Vist Way:</label><br>
-                            <input type="text" class="mb-3" id="phf_visitWay" name="phf_visitWay"><br>
+                            <input type="text" required class="mb-3" id="phf_visitWay" name="phf_visitWay"><br>
                         </div>
                         <div class="col">
                         </div>
@@ -230,19 +230,19 @@
                 <h2>Delete a Facility</h2>
                 <form class="mb-3">
                     <label for="phf_id">Facility ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="phf_id" name="phf_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Display a Facility</h2>
                 <form class="mb-3">
                     <label for="phf_id">Facility ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="phf_id" name="phf_id">
                     <button class="btn-display">Display</button>
                 </form>
                 <h2>Edit a Facility</h2>
                 <form class="mb-3">
                     <label for="phf_id">Facility ID:</label><br>
-                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id">
+                    <input type="number" required class="mb-3" id="phf_id" name="phf_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -252,27 +252,27 @@
                 <h2>Create a Region</h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="number" class="mb-3" id="region_id" name="region_id"><br>
+                    <input type="number" required class="mb-3" id="region_id" name="region_id"><br>
                     <label for="region_name">Region Name:</label><br>
-                    <input type="text" class="mb-3" id="region_name" name="region_name"><br>
+                    <input type="text" required class="mb-3" id="region_name" name="region_name"><br>
                     <button class="btn-create">Create</button>
                 </form>
                 <h2>Delete a Region</h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="number" class="mb-3" id="region_id" name="region_id">
+                    <input type="number" required class="mb-3" id="region_id" name="region_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Display a Region</h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="number" class="mb-3" id="region_id" name="region_id">
+                    <input type="number" required class="mb-3" id="region_id" name="region_id">
                     <button class="btn-display">Display</button>
                 </form>
                 <h2>Edit a Region</h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="number" class="mb-3" id="region_id" name="region_id">
+                    <input type="number" required class="mb-3" id="region_id" name="region_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -282,29 +282,29 @@
                 <h2>Create a Group Zone</h2>
                 <form class="mb-3">
                     <label for="gz_id">Group Zone ID:</label><br>
-                    <input type="number" class="mb-3" id="gz_id" name="gz_id"><br>
+                    <input type="number" required class="mb-3" id="gz_id" name="gz_id"><br>
                     <label for="gz_name">Group Zone Name:</label><br>
-                    <input type="text" class="mb-3" id="gz_name" name="gz_name"><br>
+                    <input type="text" required class="mb-3" id="gz_name" name="gz_name"><br>
                     <label for="gz_type">Group Zone Type:</label><br>
-                    <input type="text" class="mb-3" id="gz_type" name="gz_type"><br>
+                    <input type="text" required class="mb-3" id="gz_type" name="gz_type"><br>
                     <button class="btn-create">Create</button>
                 </form>
                 <h2>Delete a Group Zone</h2>
                 <form class="mb-3">
                     <label for="gz_id">Group Zone ID:</label><br>
-                    <input type="number" class="mb-3" id="gz_id" name="gz_id">
+                    <input type="number" required class="mb-3" id="gz_id" name="gz_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Display a Group Zone</h2>
                 <form class="mb-3">
                     <label for="gz_id">Group Zone ID:</label><br>
-                    <input type="number" class="mb-3" id="gz_id" name="gz_id">
+                    <input type="number" required class="mb-3" id="gz_id" name="gz_id">
                     <button class="btn-display">Display</button>
                 </form>
                 <h2>Edit a Group Zone</h2>
                 <form class="mb-3">
                     <label for="gz_id">Employee ID:</label><br>
-                    <input type="number" class="mb-3" id="gz_id" name="gz_id">
+                    <input type="number" required class="mb-3" id="gz_id" name="gz_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -313,22 +313,22 @@
                 <h1>Q6 Add/Delete/Edit a public health recommendation.</h1>
                 <h2>Add a Health Recommendation</h2>
                 <br><label for="description">Description:</label><br>
-                <textarea type="text" class="mb-3" rows="5" cols="80" id="description" name="description"> </textarea><br>
+                <textarea type="text" required class="mb-3" rows="5" cols="80" id="description" name="description"> </textarea><br>
                 <label for="info_id">Recommendation ID:</label><br>
-                <input type="number" class="mb-3" id="info_id" name="info_id"><br>
+                <input type="number" required class="mb-3" id="info_id" name="info_id"><br>
                 <label for="info_type">Recommendation Type:</label><br>
-                <input type="number" class="mb-3" id="info_type" name="info_type"><br>
+                <input type="number" required class="mb-3" id="info_type" name="info_type"><br>
                 <button class="btn-create">Create</button>
                 <h2>Delete a Health Recommendation</h2>
                 <form class="mb-3">
                     <label for="info_id">Recommendation ID:</label><br>
-                    <input type="number" class="mb-3" id="info_id" name="info_id">
+                    <input type="number" required class="mb-3" id="info_id" name="info_id">
                     <button class="btn-delete">Delete</button>
                 </form>
                 <h2>Edit a Health Recommendation</h2>
                 <form class="mb-3">
                     <label for="info_id">Recommendation ID:</label><br>
-                    <input type="number" class="mb-3" id="info_id" name="info_id">
+                    <input type="number" required class="mb-3" id="info_id" name="info_id">
                     <button class="btn-edit">Edit</button>
                 </form>
             </div>
@@ -338,12 +338,12 @@
                 <h2></h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="text" class="mb-3" id="region_id" name="region_id"><br>
+                    <input type="text" required class="mb-3" id="region_id" name="region_id"><br>
                     <button class="btn-create">Create</button>
                 </form>
             </div>
             <!--Q8 followup form-->
-            <div class="tab-pane fade" id="q8" role="tabpanel" aria-labelledby="q8-tab">
+            <div class="tab-pane fade" required id="q8" role="tabpanel" aria-labelledby="q8-tab">
                 <h1>Follow-up Form
                 </h1>
                 <h2></h2>
@@ -351,15 +351,15 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="employee_id">Employee ID:</label><br>
-                            <input type="text" class="mb-3" id="employee_id" name="employee_id"><br>
+                            <input type="text" required class="mb-3" id="employee_id" name="employee_id"><br>
                         </div>
                         <div class="col">
                             <label for="startTime">Date and Time:</label><br>
-                            <input type="datetime-local" class="mb-3" id="startTime" name="startTime"><br>
+                            <input type="datetime-local" required class="mb-3" id="startTime" name="startTime"><br>
                         </div>
                         <div class="col">
                             <label for="temperature">Temperature (celsius):</label><br>
-                            <input type="text" class="mb-3" id="temperature" name="temperature"><br>
+                            <input type="text" class="mb-3" required id="temperature" name="temperature"><br>
                         </div>
                     </div>
 
@@ -402,11 +402,11 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_id">Person ID:</label><br>
-                            <input type="text" class="mb-3" id="ppl_id" name="ppl_id"><br>
+                            <input type="text" required class="mb-3" id="ppl_id" name="ppl_id"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_dob">Date:</label><br>
-                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
+                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob"><br>
                         </div>
                     </div>
                     <button class="btn-create">Check</button>
@@ -420,11 +420,11 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="date_time">From:</label><br>
-                            <input type="datetime-local" class="mb-3" id="date_time" name="date_time"><br>
+                            <input type="datetime-local" required class="mb-3" id="date_time" name="date_time"><br>
                         </div>
                         <div class="col">
                             <label for="date_time">To:</label><br>
-                            <input type="datetime-local" class="mb-3" id="date_time" name="date_time"><br>
+                            <input type="datetime-local" required class="mb-3" id="date_time" name="date_time"><br>
                         </div>
                     </div>
                     <button class="btn-display">Display All Message</button>
@@ -439,29 +439,29 @@
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_fname">First name:</label><br>
-                            <input type="text" class="mb-3" id="ppl_fname" name="ppl_fname"><br>
+                            <input type="text" required class="mb-3" id="ppl_fname" name="ppl_fname"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_lname">Last name:</label><br>
-                            <input type="text" class="mb-3" id="ppl_lname" name="ppl_lname"><br>
+                            <input type="text" required class="mb-3" id="ppl_lname" name="ppl_lname"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_dob">Date of Birth:</label><br>
-                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
+                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_medNum">Medicare Number:</label><br>
-                            <input type="text" class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
+                            <input type="text" required class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
                         </div>
                     </div>
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_telNum">Tel:</label><br>
-                            <input type="text" class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
+                            <input type="text" required class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_citizenship">Citizenship:</label><br>
-                            <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
+                            <input type="text" required class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_email">Email:</label><br>
