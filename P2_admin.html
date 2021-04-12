@@ -508,7 +508,7 @@
                 <form class="mb-3">
                     <label for="ppl_dob">Date:</label><br>
                     <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob" required><br>
-                    <button class="btn-search">Search</button>
+                    <button>Search</button>
                 </form>
             </div>
             <!--Q15-->
@@ -518,36 +518,114 @@
                 <form class="mb-3">
                     <label for="phf_id">Public Health Facility ID:</label><br>
                     <input type="number" class="mb-3" id="phf_id" name="phf_id" required><br>
-                    <button class="btn-search">Search</button>
+                    <button>Search</button>
                 </form>
             </div>
             <!--Q16-->
             <div class="tab-pane fade" id="q16" role="tabpanel" aria-labelledby="q16-tab">
-                <h1>Q16 Give a list of all public health workers who tested positive on a specific date in a specific facility. In addition, provide a list of the employees who worked with the infected health workers for the period of fourteen days prior
-                    to the test. Use the date of the test taken by the infected health worker.
-                </h1>
+                <h1 class="mb-3">Q16</h1>
                 <form class="mb-3">
+                    <h2>List of People Who Tested Positive</h2>
                     <div class="row align-items-start">
-                        <div class="col-4">
-                            <label for="ppl_dob">Positive Result Date:</label><br>
-                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob" required><br>
+                        <div class="col">
+                            <label for="resultDate">On Date:</label><br>
+                            <input type="date" class="mb-3" id="resultDate" name="resultDate" required><br>
                         </div>
                         <div class="col">
-                            <label for="phf_id">Public Health Facility ID:</label><br>
+                            <label for="phf_id">In Public Health Facility (ID):</label><br>
                             <input type="number" class="mb-3" id="phf_id" name="phf_id" required><br>
                         </div>
                     </div>
-                    <button class="btn-search">Search</button>
+                    <button class="mb-3">Search</button>
+                    <h2>List of Employees Who Worked with Infected Health Workers for 14 Days Prior to The Test</h2>
+                    <button class="mb-3">Search</button>
                 </form>
             </div>
             <!--Q17-->
             <div class="tab-pane fade" id="q17" role="tabpanel" aria-labelledby="q17-tab">
                 <h1>Q17 For all regions, provide a report that include the region name, the number of people who have positive results, the number of people who have negative results and a history of alerts within a specific period-of- time.
                 </h1>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="startDateTime">From:</label><br>
+                            <input type="datetime-local" class="mb-3" id="startDateTime" name="startDateTime" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="endDateTime">To:</label><br>
+                            <input type="datetime-local" class="mb-3" id="endDateTime" name="endDateTime" required><br>
+                        </div>
+                    </div>
+                    <button class="mb-3">Generate</button>
+                </form>
             </div>
             <!--Q18-->
             <div class="tab-pane fade" id="q18" role="tabpanel" aria-labelledby="q18-tab">
-                <h1>Q18</h1>
+                <h1>Q18 Create/Delete/Edit/Display a Diagnose</h1>
+                <h2>Create a Diagnose</h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="employee_id">Employee ID:</label><br>
+                            <input type="number" class="mb-3" id="employee_id" name="employee_id" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="testDate">Test Date:</label><br>
+                            <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="testLocation">Public Health Facility ID:</label><br>
+                            <input type="number" class="mb-3" id="testLocation" name="testLocation" required><br>
+                        </div>
+                    </div>
+                    <button class="btn-create">Create</button>
+                </form>
+                <h2>Delete a Diagnose</h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="testDate">Test Date:</label><br>
+                            <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
+                        </div>
+                    </div>
+                    <button class="btn-delete">Delete</button>
+                </form>
+                <h2>Display a Diagnose</h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="testDate">Test Date:</label><br>
+                            <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
+                        </div>
+                    </div>
+                    <button class="btn-display">Display</button>
+                </form>
+                <h2>Edit a Diagnose</h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="testDate">Test Date:</label><br>
+                            <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
+                        </div>
+                    </div>
+                    <button class="btn-edit">Edit</button>
+                </form>
             </div>
             <!--Q19-->
             <div class="tab-pane fade" id="q19" role="tabpanel" aria-labelledby="q19-tab">
