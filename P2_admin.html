@@ -629,7 +629,20 @@
             </div>
             <!--Q19-->
             <div class="tab-pane fade" id="q19" role="tabpanel" aria-labelledby="q19-tab">
-                <h1>Q19</h1>
+                <h1>Q19 Modify the Alert Level for a Region</h1>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="region_id">Region ID:</label><br>
+                            <input type="number" class="mb-3" id="region_id" name="region_id" oninput="if(value<1)value=1" required><br>
+                        </div>
+                        <div class="col">
+                            <label for="alert_level">Alert Level:</label><br>
+                            <input type="number" class="mb-3" id="alert_level" name="alert_level" oninput="if(value>4)value=4;if(value<1)value=1" required><br>
+                        </div>
+                    </div>
+                    <button class="btn-create">Change</button>
+                </form>
             </div>
         </div>
     </div>
