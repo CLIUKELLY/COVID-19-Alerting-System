@@ -517,7 +517,7 @@
                 </h1>
                 <form class="mb-3">
                     <label for="phf_id">Public Health Facility ID:</label><br>
-                    <input type="number" class="mb-3" id="phf_id" name="phf_id" required><br>
+                    <input type="number" class="mb-3" id="phf_id" name="phf_id" oninput="if(value<1)value=1" required><br>
                     <button>Search</button>
                 </form>
             </div>
@@ -533,7 +533,7 @@
                         </div>
                         <div class="col">
                             <label for="phf_id">In Public Health Facility (ID):</label><br>
-                            <input type="number" class="mb-3" id="phf_id" name="phf_id" required><br>
+                            <input type="number" class="mb-3" id="phf_id" name="phf_id" oninput="if(value<1)value=1" required><br>
                         </div>
                     </div>
                     <button class="mb-3">Search</button>
