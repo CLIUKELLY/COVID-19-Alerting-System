@@ -89,26 +89,52 @@
                 <h1>Q1 Create/Delete/Edit/Display a Person.</h1>
                 <h2>Create Person</h2>
                 <form class="mb-3">
-                    <label for="ppl_fname">First name:</label><br>
-                    <input type="text" class="mb-3" id="ppl_fname" name="ppl_fname"><br>
-                    <label for="ppl_lname">Last name:</label><br>
-                    <input type="text" class="mb-3" id="ppl_lname" name="ppl_lname"><br>
-                    <label for="ppl_gender">Gender:</label><br>
-                    <input type="text" class="mb-3" id="ppl_gender" name="ppl_gender" placeholder="M/F" pattern="[M|F]"><br>
-                    <label for="ppl_dob">Date of Birth:</label><br>
-                    <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
-                    <label for="ppl_citizenship">Citizenship:</label><br>
-                    <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
-                    <label for="ppl_medNum">Medicare Number:</label><br>
-                    <input type="text" class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
-                    <label for="ppl_telNum">Tel:</label><br>
-                    <input type="text" class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
-                    <label for="ppl_email">Email:</label><br>
-                    <input type="text" class="mb-3" id="ppl_email" name="ppl_email"><br>
-                    <label for="Mparent">Mother ppl_id:</label><br>
-                    <input type="text" class="mb-3" id="Mparent" name="Mparent"><br>
-                    <label for="Fparent">Father ppl_id:</label><br>
-                    <input type="text" class="mb-3" id="Fparent" name="Fparent"><br>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_fname">First name:</label><br>
+                            <input type="text" class="mb-3" id="ppl_fname" name="ppl_fname"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_lname">Last name:</label><br>
+                            <input type="text" class="mb-3" id="ppl_lname" name="ppl_lname"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_gender">Gender:</label><br>
+                            <input type="text" class="mb-3" id="ppl_gender" name="ppl_gender" placeholder="M/F" pattern="[M|F]"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_dob">Date of Birth:</label><br>
+                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_citizenship">Citizenship:</label><br>
+                            <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_medNum">Medicare Number:</label><br>
+                            <input type="text" class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_telNum">Tel:</label><br>
+                            <input type="text" class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_email">Email:</label><br>
+                            <input type="text" class="mb-3" id="ppl_email" name="ppl_email"><br>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="Mparent">Mother ppl_id:</label><br>
+                            <input type="text" class="mb-3" id="Mparent" name="Mparent"><br>
+                        </div>
+                        <div class="col">
+                            <label for="Fparent">Father ppl_id:</label><br>
+                            <input type="text" class="mb-3" id="Fparent" name="Fparent"><br>
+                        </div>
+                    </div>
                     <button class="btn-create">Create</button>
                 </form>
                 <h2>Delete Person</h2>
@@ -155,7 +181,7 @@
                 <h1>Q6 Add/Delete/Edit a public health recommendation.</h1>
                 <h2>Health Recommendation</h2>
             </div>
-            <!--Q7-->
+            <!--Q7 new alert for a region-->
             <div class="tab-pane fade" id="q7" role="tabpanel" aria-labelledby="q7-tab">
                 <h1>Q7 Set a new alert for a specific region.</h1>
                 <h2></h2>
@@ -165,7 +191,7 @@
                     <button class="btn-create">Create</button>
                 </form>
             </div>
-            <!--Q8 new alert for a region-->
+            <!--Q8 followup form-->
             <div class="tab-pane fade" id="q8" role="tabpanel" aria-labelledby="q8-tab">
                 <h1>Follow-up Form
                 </h1>
@@ -216,10 +242,24 @@
                     <button class="btn-create">Create</button>
                 </form>
             </div>
-            <!--Q9 followup form-->
+            <!--Q9 Progress of symptoms-->
             <div class="tab-pane fade" id="q9" role="tabpanel" aria-labelledby="q9-tab">
-                <h1>Q9 Provide a detail progress of all the symptoms for a given person who tested positive on a specific date.
+                <h1>Q9 Check a detail progress of all the symptoms.
                 </h1>
+                <h2></h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID:</label><br>
+                            <input type="text" class="mb-3" id="ppl_id" name="ppl_id"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_dob">Date:</label><br>
+                            <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob"><br>
+                        </div>
+                    </div>
+                    <button class="btn-create">Check</button>
+                </form>
             </div>
             <!--Q10-->
             <div class="tab-pane fade" id="q10" role="tabpanel" aria-labelledby="q10-tab">
