@@ -86,7 +86,7 @@
 
             <!--Q1-->
             <div class="tab-pane fade show active" id="q1" role="tabpanel" aria-labelledby="q1-tab">
-                <h1>Q1</h1>
+                <h1>Q1 Create/Delete/Edit/Display a Person.</h1>
                 <h2>Create Person</h2>
                 <form class="mb-3">
                     <label for="ppl_fname">First name:</label><br>
@@ -132,72 +132,136 @@
             </div>
             <!--Q2-->
             <div class="tab-pane fade" id="q2" role="tabpanel" aria-labelledby="q2-tab">
-                <h1>Q2</h1>
+                <h1>Q2 Create/Delete/Edit/Display a Public Health Worker.</h1>
                 <h2>Create Public Health Worker</h2>
             </div>
             <!--Q3-->
             <div class="tab-pane fade" id="q3" role="tabpanel" aria-labelledby="q3-tab">
-                <h1>Q3</h1>
+                <h1>Q3 Create/Delete/Edit/Display a Facility.</h1>
                 <h2>Facility</h2>
             </div>
             <!--Q4-->
             <div class="tab-pane fade" id="q4" role="tabpanel" aria-labelledby="q4-tab">
-                <h1>Q4</h1>
+                <h1>Q4 Create/Delete/Edit/Display a Region.</h1>
                 <h2>Region</h2>
             </div>
             <!--Q5-->
             <div class="tab-pane fade" id="q5" role="tabpanel" aria-labelledby="q5-tab">
-                <h1>Q5</h1>
+                <h1>Q5 Create/Delete/Edit/Display a Group Zone.</h1>
                 <h2>Group Zone</h2>
             </div>
             <!--Q6-->
             <div class="tab-pane fade" id="q6" role="tabpanel" aria-labelledby="q6-tab">
-                <h1>Q6</h1>
+                <h1>Q6 Add/Delete/Edit a public health recommendation.</h1>
                 <h2>Health Recommendation</h2>
             </div>
             <!--Q7-->
             <div class="tab-pane fade" id="q7" role="tabpanel" aria-labelledby="q7-tab">
-                <h1>Q7</h1>
+                <h1>Q7 Set a new alert for a specific region.</h1>
+                <h2></h2>
+                <form class="mb-3">
+                    <label for="region_id">Region ID:</label><br>
+                    <input type="text" class="mb-3" id="region_id" name="region_id"><br>
+                    <button class="btn-create">Create</button>
+                </form>
             </div>
-            <!--Q8-->
+            <!--Q8 new alert for a region-->
             <div class="tab-pane fade" id="q8" role="tabpanel" aria-labelledby="q8-tab">
-                <h1>Q8</h1>
+                <h1>Follow-up Form
+                </h1>
+                <h2></h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="employee_id">Employee ID:</label><br>
+                            <input type="text" class="mb-3" id="employee_id" name="employee_id"><br>
+                        </div>
+                        <div class="col">
+                            <label for="startTime">Date and Time:</label><br>
+                            <input type="datetime-local" class="mb-3" id="startTime" name="startTime"><br>
+                        </div>
+                        <div class="col">
+                            <label for="temperature">Temperature (celsius):</label><br>
+                            <input type="text" class="mb-3" id="temperature" name="temperature"><br>
+                        </div>
+                    </div>
+
+                    <h3>Main Symptoms</h3>
+                    <input type="checkbox" class="mb-3" id="main_fever" name="main_fever">
+                    <label for="main_fever">fever</label>
+                    <input type="checkbox" class="mb-3" id="main_cough" name="main_cough">
+                    <label for="main_cough">cough</label>
+                    <input type="checkbox" class="mb-3" id="main_difficultyInBreathing" name="main_difficultyInBreathing">
+                    <label for="main_difficultyInBreathing">difficulties in breathing</label>
+                    <input type="checkbox" class="mb-3" id="main_lostOfTasteAndSmell" name="main_lostOfTasteAndSmell">
+                    <label for="main_lostOfTasteAndSmell">loss of taste and smell</label>
+
+                    <h3>Other Symptoms</h3>
+                    <input type="checkbox" class="mb-3" id="other_nausea" name="other_nausea">
+                    <label for="other_nausea">nausea</label>
+                    <input type="checkbox" class="mb-3" id="other_stomachache" name="other_stomachache">
+                    <label for="other_stomachache">stomachache</label>
+                    <input type="checkbox" class="mb-3" id="other_vomiting" name="other_vomiting">
+                    <label for="other_vomiting">vomiting</label>
+                    <input type="checkbox" class="mb-3" id="other_headache" name="other_headache">
+                    <label for="other_headache">headache</label>
+                    <input type="checkbox" class="mb-3" id="other_musclePain" name="other_musclePain">
+                    <label for="other_musclePain">musclePain</label>
+                    <input type="checkbox" class="mb-3" id="other_diarrhea" name="other_diarrhea">
+                    <label for="other_diarrhea">diarrhea</label>
+                    <input type="checkbox" class="mb-3" id="other_soreThroat" name="other_soreThroat">
+                    <label for="other_soreThroat">soreThroat</label>
+                    <br><label for="non-Specified Symptom">Other Non-Specified Symptom:</label><br>
+                    <textarea type="text" class="mb-3" rows="5" cols="80" id="non-Specified Symptom" name="non-Specified Symptom"> </textarea><br>
+                    <button class="btn-create">Create</button>
+                </form>
             </div>
-            <!--Q9-->
+            <!--Q9 followup form-->
             <div class="tab-pane fade" id="q9" role="tabpanel" aria-labelledby="q9-tab">
-                <h1>Q9</h1>
+                <h1>Q9 Provide a detail progress of all the symptoms for a given person who tested positive on a specific date.
+                </h1>
             </div>
             <!--Q10-->
             <div class="tab-pane fade" id="q10" role="tabpanel" aria-labelledby="q10-tab">
-                <h1>Q10</h1>
+                <h1>Q10 Display all messages generated by the system within a specific period-of- time.
+                </h1>
             </div>
             <!--Q11-->
             <div class="tab-pane fade" id="q11" role="tabpanel" aria-labelledby="q11-tab">
-                <h1>Q11</h1>
+                <h1>Q11 Give a list of all the People in a specific address. For every person, provide the first name, last name, DOB, medicare card number, telephone number, citizenship, email address, full mother’s name and full father’s name.
+                </h1>
             </div>
             <!--Q12-->
             <div class="tab-pane fade" id="q12" role="tabpanel" aria-labelledby="q12-tab">
-                <h1>Q12</h1>
+                <h1>Q12 Give a detail list of all facilities (Address, Number of health workers, accept walk-in clients or by appointment only, Drive thru capability, etc.).
+                </h1>
             </div>
             <!--Q13-->
             <div class="tab-pane fade" id="q13" role="tabpanel" aria-labelledby="q13-tab">
-                <h1>Q13</h1>
+                <h1>Q13 Give a detail list of all Regions (Name, list of all cities within the region, and a list of all the postal codes within every city).
+                </h1>
             </div>
             <!--Q14-->
             <div class="tab-pane fade" id="q14" role="tabpanel" aria-labelledby="q14-tab">
-                <h1>Q14</h1>
+                <h1>Q14 Give a List of all people who got the result of the test on a specific date (Date of the result of the test) grouped by the test result value (First who got positive result, then who got negative result). The list must include First
+                    Name, Last Name, DOB, Phone Number and email address of the diagnosed person.
+                </h1>
             </div>
             <!--Q15-->
             <div class="tab-pane fade" id="q15" role="tabpanel" aria-labelledby="q15-tab">
-                <h1>Q15</h1>
+                <h1>Q15 Give a list of all workers in a specific facility.
+                </h1>
             </div>
             <!--Q16-->
             <div class="tab-pane fade" id="q16" role="tabpanel" aria-labelledby="q16-tab">
-                <h1>Q16</h1>
+                <h1>Q16 Give a list of all public health workers who tested positive on a specific date in a specific facility. In addition, provide a list of the employees who worked with the infected health workers for the period of fourteen days prior
+                    to the test. Use the date of the test taken by the infected health worker.
+                </h1>
             </div>
             <!--Q17-->
             <div class="tab-pane fade" id="q17" role="tabpanel" aria-labelledby="q17-tab">
-                <h1>Q17</h1>
+                <h1>Q17 For all regions, provide a report that include the region name, the number of people who have positive results, the number of people who have negative results and a history of alerts within a specific period-of- time.
+                </h1>
             </div>
             <!--Q18-->
             <div class="tab-pane fade" id="q18" role="tabpanel" aria-labelledby="q18-tab">
