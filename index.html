@@ -45,46 +45,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous "></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
-        <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
-        <script>
-            var username = $('#username');
-            var password = $('#password');
 
-            // Login
-            $('#login').click(function() {
-                if (username.val() == '') {
-                    alert('Enter your Medicare Card Number, please!');
-                    return;
-                }
-                if (password.val() == '') {
-                    alert('Enter your password, please!');
-                    return;
-                }
-                $.ajax({
-                    url: proBaseUrl + 'user/login',
-                    type: 'POST',
-                    data: {
-                        username: username.val(),
-                        password: password.val()
-                    },
-                    success: (res) => {
-                        if (res.code == 0) {
-                            if (res.data.user_jobPosition == 'Product Manager') {
-                                localStorage.setItem('userManager', JSON.stringify(res.data));
-                                window.location.href = 'P2_requests_manager.html';
-                            } else if (res.data.user_jobPosition == 'Commercial Business Analyst') {
-                                localStorage.setItem('userAnalyst', JSON.stringify(res.data));
-                                window.location.href = 'P2_requests_analyst.html';
-                            } else {
-                                alert('The user does not have permission');
-                            }
-                        } else {
-                            alert(res.msg);
-                        }
-                    }
-                })
-            })
-        </script>
     </div>
 </div>
 
