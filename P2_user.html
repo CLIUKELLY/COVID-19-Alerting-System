@@ -6,364 +6,158 @@
     <meta charset="utf-8">
     <Title>Requests</Title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/P2_requests.css">
-    <link rel="stylesheet" href="font/iconfont.css">
-    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
-<!-------------------------------------------------
-    Container: contains Header, content, footer
---------------------------------------------------->
 
-<div id="container">
+<body style="background-color: #e3f2fd;">
+    <!------------------------------
+                Banner
+    ------------------------------->
+    <div class="container-fluid bg-primary">
+        <p class="text-center fs-1 fw-bold text-white ">COVID-19 Public Health Care System</p>
+        <p class="text-center fs-2 fw-bold text-white ">User Home</p>
+    </div>
 
-    <body id="body">
-        <!--Banner-->
-        <div class="header">
-            <br>
-            <h1>WELCOME TO</h1>
-            <h2>
-                <I>COVID-19 Public Health Care System</I>
-                <br>
-                <I>User Home</I>
-            </h2>
-        </div>
+    <!------------------------------
+                Navigation Bar
+    ------------------------------->
+    <div class="container-fluid bg-light">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="q1-tab" data-bs-toggle="tab" data-bs-target="#q1" type="button" role="tab" aria-controls="q1" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="q2-tab" data-bs-toggle="tab" data-bs-target="#q2" type="button" role="tab" aria-controls="q2" aria-selected="false">Follow-up Form</button>
+            </li>
+        </ul>
+        <div class="tab-content mt-3 ms-3 me-3" id="myTabContent">
 
-        <!--Navigation Bar-->
+            <!--Q1 Create/Delete/Edit/Display a person-->
+            <div class="tab-pane fade show active" id="q1" role="tabpanel" aria-labelledby="q1-tab">
+                <h1>Public Health Information and Recommendations
+                </h1>
+                <p>
+                    Sick person under home isolation is asked to follow the instructions below to prevent the spread of COVID-19 to other people:
+                </p>
+                <ul>
+                    <li>Do not go to school, work, a childcare center or any other public space.
+                    </li>
+                    <li>Do not use public transport.
+                    </li>
+                    <li>If the sick person lives alone and has no help to get essentials such as food or medication, use phone/online grocery and pharmacy home delivery services. </li>
+                    <li>Do not receive visitors at home. </li>
+                    <ul>
+                        <li>Remain alone in one room of the house as often as possible and close to the door. </li>
+                        <li>Eat and sleep alone in one room of the house. </li>
+                        <li>If possible, use a bathroom reserved for the sick person sole use. Otherwise, disinfect the bathroom after every use. </li>
+                        <li>Avoid as much as possible contact with other people in the home. If this is impossible, wear a mask. If a mask is not available, stay at least two meters away from other people.
+                        </li>
+                    </ul>
+                    <li>Open a window to air out the sick person's room and home often (weather permitting).
+                    </li>
+                    <li>Do not go to a medical clinic unless you have first obtained an appointment and have notified the clinic that you have COVID-19. If you need to go to the emergency room (eg, if you have difficulty breathing), contact 911 and tell the
+                        person that you are sick with COVID-19. </li>
+                    <li>Wear a mask when someone is in the same room as you. </li>
+                    <li>Wear a mask if you must leave your home to seek medical care, you must first notify the medical clinic (or 911, if it is an emergency) that you have COVID-19. </li>
+                    <li>If you need to cough, sneeze, or blow your nose:
+                    </li>
+                    <ul>
+                        <li>If you have a disposable tissue use it to cough, sneeze or blow your nose then discard the tissue in the garbage, and then wash your hands with soap and water. </li>
+                        <li>If you do not have disposable tissues, cough, or sneeze in the crook of your arm. </li>
+                    </ul>
+                    <li>Wash your hands:
+                    </li>
+                    <ul>
+                        <li>Wash your hands often with soap under warm running water for at least 20 seconds. </li>
+                        <li> Use an alcohol- based hand rub if soap and water are not available. </li>
+                        <li> Wash your hands before eating and whenever your hands look dirty. </li>
+                        <li>After using the toilet, put the lid down before flushing and then wash your hands.
+                        </li>
+                    </ul>
+                    <li>Do not share plates, utensils, glasses, towels, bed sheets or clothes with others. </li>
+                    <li>Watch your symptoms and take your temperature every day:
+                    </li>
+                    <ul>
+                        <li>Take your temperature every day at the same hour. </li>
+                        <li>If you are taking medication for fever wait at least four hours before taking your temperature. </li>
+                    </ul>
+                    <li>Directives in case of severe symptoms:
+                    </li>
+                    <ul>
+                        <li>If your symptoms worsen call 514-644-4545 or call your doctor. </li>
+                        <li>If you have difficulty breathing, or shortness of breath or chest pain call 911 and inform them you may be infected by COVID-19.
+                        </li>
+                    </ul>
+                    <li>If someone close or caregiver helps you with your daily activities, then before helping you, the person must wash his/her hand, wear a mask and put-on disposable gloves. After helping you, the person must take off the gloves and put
+                        them in a garbage bin with a lid, wash his/her hands, take off the mask and put it in a garbage bin with a lid, and wash his/her hands again. </li>
+                    <li>For help with psychosocial matters, contact 811.
+                    </li>
 
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="P2_requests_analyst.html">Requests</a>
-            <a href="P6_calendar.html">Calendar</a>
-        </div>
-
-        <!-------------------------------------------------
-                    Main content section
-                --------------------------------------------------->
-        <section class="main">
-            <div class="row">
-
-                <div class="col-1 col-t-1 col-p-1">
-                    <!-------------------------------------------------
-                                Request List
-                             ------------------------------------------------->
-                    <div class="shopping-cart">
-                        <br>
-                        <div class="title">
-                            <h2>Request List</h2>
-                            <div class="search-box">
-                                <input class="search" @input="watchInput" v-model="keyword" type="text" placeholder="Please enter ID">
-                                <div class="go iconfont icon-sousuo" @click="search()"></div>
-                            </div>
-                        </div>
-                        <!-- <form name="ShoppingList"> -->
-
-                        <table id="table-shopping-cart">
-                            <tr class="cartRows">
-                                <th class="thead" v-for="(item,a) in headList" :key="a">
-                                    {{item.name}}
-                                    <ul class="arrow" @click="sort(a,item)">
-                                        <li class="iconfont icon-shangjiantou" :class="!item.isAsc?'on':''"></li>
-                                        <li class="iconfont icon-shangjiantou-copy" :class="item.isAsc?'on':''"></li>
-                                    </ul>
-                                </th>
-                            </tr>
-                            <tr class="cartRows" v-for="(item,b) in bodyList" :key="b">
-                                <td>{{item.id}}</td>
-                                <td class="product-name">{{item.title}}</td>
-                                <td>
-                                    <input type="button" class="btn-change COLAsub" @click="reduce(b,item.id)" value="-">
-                                    <span class="qtn-addToCart-COLA">{{item.piority}}</span>
-                                    <input type="button" class="btn-change COLAadd" @click="add(b,item.id)" value="+">
-                                </td>
-                                <td class="product-price">{{item.sender}}</td>
-                                <td class="product-subtotal-COLA">{{item.time}}</td>
-                                <td class="product-subtotal-COLA">{{item.date}}</td>
-
-                                <td class="product-subtotal-COLA">{{item.urgency}}</td>
-                                <td class="product-subtotal-COLA">{{item.status}}</td>
-                            </tr>
-                        </table>
-
-                        <!-- </form> -->
-
-
-                    </div>
-                </div>
-                <div class="col-2 col-t-2 col-p-2">
-
-
-                    <!-------------------------------------------------
-                          Request Summary
-                    --------------------------------------------------->
-
-                    <div class="cart-summary">
-                        <div class="cart-summary-container">
-                            <h4 style="padding: 10px 0;">Active Request Quantity
-                                <span class="price" style="color:black">
-        									<i class="fa fa-shopping-cart"></i> 
-        									<p class="shoppingCartTotalItems">{{summary}}</p> 
-        								</span>
-                            </h4>
-                            <hr style="margin-bottom: 10px;">
-                            <p style="padding: 4px 0;" v-for="(item,d) in summaryList" :key="d">{{item.name}}<span class="price QST" style="color:rgb(75, 73, 73)"><b>{{item.value}}</b></span></p>
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="continue-shopping col-1 col-t-1 col-p-1">
-                <ul class="page">
-                    <li class="btn pre" @click="previous()" :class="page==1?'active':''">Previous</li>
-                    <li class="btn num" :class="currentIndex==c?'on':''" v-for="(item,c) in totalSize" @click="changePage(c)" :key="c">{{c+1}}</li>
-                    <li class="btn next" :class="totalSize==page?'active':''" @click="next()">Next</li>
                 </ul>
+
             </div>
+            <!--Q2 Create/Delete/Edit/Display a Public Health Worker-->
+            <div class="tab-pane fade" id="q2" role="tabpanel" aria-labelledby="q2-tab">
+                <h1>Follow-up Form
+                </h1>
+                <h2></h2>
+                <form class="mb-3">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" required class="mb-3" id="ppl_id" name="ppl_id" min=1>
+                        </div>
+                        <div class="col">
+                            <label for="temperature">Temperature (celsius):</label><br>
+                            <input type="number" step="0.1" class="mb-3" required id="temperature" name="temperature" min=35 max=43><br>
+                        </div>
+                        <div class="col">
+                            <label for="resultDate">Test Result Datetime:</label><br>
+                            <input type="datetime-local" step="0.1" class="mb-3" required id="resultDate" name="resultDate"><br>
+                        </div>
+                    </div>
 
+                    <h3>Main Symptoms</h3>
+                    <input type="checkbox" class="mb-3" id="main_fever" name="main_fever">
+                    <label for="main_fever">fever</label>
+                    <input type="checkbox" class="mb-3" id="main_cough" name="main_cough">
+                    <label for="main_cough">cough</label>
+                    <input type="checkbox" class="mb-3" id="main_difficultyInBreathing" name="main_difficultyInBreathing">
+                    <label for="main_difficultyInBreathing">difficulties in breathing</label>
+                    <input type="checkbox" class="mb-3" id="main_lostOfTasteAndSmell" name="main_lostOfTasteAndSmell">
+                    <label for="main_lostOfTasteAndSmell">loss of taste and smell</label>
 
-            <!--Footer-->
-            <div class="footer">
-                <br>
-                <pre>  Footer
-                    </pre>
+                    <h3>Other Symptoms</h3>
+                    <input type="checkbox" class="mb-3" id="other_nausea" name="other_nausea">
+                    <label for="other_nausea">nausea</label>
+                    <input type="checkbox" class="mb-3" id="other_stomachache" name="other_stomachache">
+                    <label for="other_stomachache">stomachache</label>
+                    <input type="checkbox" class="mb-3" id="other_vomiting" name="other_vomiting">
+                    <label for="other_vomiting">vomiting</label>
+                    <input type="checkbox" class="mb-3" id="other_headache" name="other_headache">
+                    <label for="other_headache">headache</label>
+                    <input type="checkbox" class="mb-3" id="other_musclePain" name="other_musclePain">
+                    <label for="other_musclePain">muscle pain</label>
+                    <input type="checkbox" class="mb-3" id="other_diarrhea" name="other_diarrhea">
+                    <label for="other_diarrhea">diarrhea</label>
+                    <input type="checkbox" class="mb-3" id="other_soreThroat" name="other_soreThroat">
+                    <label for="other_soreThroat">sore throat</label>
+                    <br><label for="non-Specified Symptom">Other Non-Specified Symptom:</label><br>
+                    <textarea type="text" class="mb-3" rows="5" cols="80" id="non-Specified Symptom" name="non-Specified Symptom"> </textarea><br>
+                    <input type="submit">
+                </form>
+
             </div>
+        </div>
+    </div>
 
-        </section>
-        <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
-        <script>
-            const regTime = /[0-9\-]{10}/;
-            const regDate = /\d{2}[:]\d{2}[:]\d{2}/
-            new Vue({
-                el: '#container',
-                data: {
-                    keyword: '',
-                    headList: [{
-                        id: 1,
-                        name: 'ID',
-                        isAsc: true,
-                        type: 'id'
-                    }, {
-                        id: 2,
-                        name: 'Request Name',
-                        isAsc: true,
-                        type: 'name'
-                    }, {
-                        id: 3,
-                        name: 'Piority',
-                        isAsc: true,
-                        type: 'piority'
-                    }, {
-                        id: 4,
-                        name: 'Sender',
-                        isAsc: true,
-                        type: 'receiver'
-                    }, {
-                        id: 5,
-                        name: 'Time',
-                        isAsc: true,
-                        type: 'create_time'
-                    }, {
-                        id: 6,
-                        name: 'Date',
-                        isAsc: true,
-                        type: 'create_time'
-                    }, {
-                        id: 7,
-                        name: 'Urgency',
-                        isAsc: true,
-                        type: 'urgency'
-                    }, {
-                        id: 8,
-                        name: 'Status',
-                        isAsc: true,
-                        type: 'status'
-                    }, ],
-                    bodyList: [],
-                    summaryList: [],
-                    page: 1,
-                    size: 10,
-                    totalSize: 0,
-                    currentIndex: 0,
-                    summary: 0
-                },
-                mounted() {
-                    this.initData();
-                    this.getSummaryData()
-                },
-                methods: {
-                    // Go to previous page
-                    previous() {
-                        if (this.page <= 1) return;
-                        this.page--;
-                        this.initData();
-                        this.currentIndex = this.page - 1;
-                    },
-                    // Go to next page
-                    next() {
-                        if (this.page == this.totalSize) return;
-                        this.page++;
-                        this.initData();
-                        this.currentIndex = this.page;
-                        this.currentIndex = this.page - 1;
-                    },
-                    // Go to page with "index"
-                    changePage(index) {
-                        let current = index + 1;
-                        this.currentIndex = index;
-                        this.page = current;
-                        this.initData();
-                    },
-                    // Sort the items in Vue (container for the objects within the Vue)
-                    sort(index, item) {
-                        this.headList[index].isAsc = !this.headList[index].isAsc;
-                        $.ajax({
-                            url: proBaseUrl + 'info/sort',
-                            data: {
-                                id: JSON.parse(localStorage.getItem('userAnalyst')).id,
-                                type: JSON.parse(localStorage.getItem('userAnalyst')).user_jobPosition,
-                                page: this.page,
-                                limit: this.size,
-                                attr: item.type,
-                                isAsc: item.isAsc
-                            },
-                            success: (res) => {
-                                if (res.code == 0) {
-                                    this.bodyList = [];
-                                    this.totalSize = Math.ceil(res.count / this.size);
-                                    res.data.forEach((item, index) => {
-                                        item.time = item.create_time.replace(regTime, '');
-                                        item.date = (item.create_time.replace(regDate, '')).replace(/[-]/g, '/');
-                                    })
-                                    this.bodyList = res.data;
-                                } else {
 
-                                }
-                            }
-                        })
-                    },
-                    // Reduce the piority
-                    reduce(index, id) {
-                        if (this.bodyList[index].piority < 1) {
-                            alert('Cannot be less than 1');
-                            return;
-                        };
-                        this.bodyList[index].piority--;
-                        this.count(id, 'reduce');
-                    },
-                    // Increase the piority
-                    add(index, id) {
-                        this.bodyList[index].piority++;
-                        this.count(id, 'add');
-                    },
-                    // Count request numebers per status 
-                    count(id, type) {
-                        $.ajax({
-                            url: proBaseUrl + 'info/add',
-                            data: {
-                                id: id,
-                                type: type
-                            },
-                            success: (res) => {
-                                if (res.code == 0) {
-                                    console.log(res.msg);
-                                } else {
-                                    console.log(res.msg);
-                                }
-                            }
-                        })
-                    },
-                    // Search for keywords
-                    search() {
-                        if (this.keyword == '') {
-                            alert('Please enter a keyword');
-                            return;
-                        }
-                        this.page = 1;
-                        let that = this;
-                        $.ajax({
-                            url: proBaseUrl + 'info/search',
-                            data: {
-                                id: JSON.parse(localStorage.getItem('userAnalyst')).id,
-                                type: JSON.parse(localStorage.getItem('userAnalyst')).user_jobPosition,
-                                page: this.page,
-                                limit: this.size,
-                                keyword: that.keyword
-                            },
-                            success: (res) => {
-                                if (res.code == 0) {
-                                    if (this.keyword) {
-                                        this.bodyList = [];
-                                    }
-                                    res.data.forEach((item, index) => {
-                                        item.time = item.create_time.replace(regTime, '');
-                                        item.date = (item.create_time.replace(regDate, '')).replace(/[-]/g, '/');
-                                    })
-                                    this.bodyList = res.data;
-                                    this.totalSize = Math.ceil(res.count / this.size);
-                                } else {
-                                    this.bodyList = [];
-                                    this.totalSize = Math.ceil(res.count / this.size);
-                                }
-                            }
-                        })
-                    },
-                    // Monitor the search textbox to see if it's empty
-                    watchInput(e) {
-                        if (this.keyword == '') {
-                            this.initData();
-                        }
-                    },
-                    // Method to get summary data, and then extend the table rows
-                    getSummaryData() {
-                        $.ajax({
-                            url: proBaseUrl + 'info/summary',
-                            data: {
-                                id: JSON.parse(localStorage.getItem('userAnalyst')).id,
-                                type: JSON.parse(localStorage.getItem('userAnalyst')).user_jobPosition,
-                            },
-                            success: (res) => {
-                                if (res.code == 0) {
-                                    res.data.forEach((item) => {
-                                        this.summary += item.value;
-                                        this.summaryList.push(item);
-                                    })
-                                } else {
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
+    <script>
+    </script>
 
-                                }
-                            }
-                        })
-                    },
-                    // Initialize data in the table
-                    initData() {
-                        $.ajax({
-                            url: proBaseUrl + 'info/list',
-                            data: {
-                                id: JSON.parse(localStorage.getItem('userAnalyst')).id,
-                                type: JSON.parse(localStorage.getItem('userAnalyst')).user_jobPosition,
-                                page: this.page,
-                                limit: this.size
-                            },
-                            success: (res) => {
-                                if (res.code == 0) {
-                                    res.data.forEach((item, index) => {
-                                        item.time = item.create_time.replace(regTime, '');
-                                        item.date = (item.create_time.replace(regDate, '')).replace(/[-]/g, '/');
-                                    })
-                                    this.bodyList = res.data;
-                                    this.totalSize = Math.ceil(res.count / this.size);
-                                } else {
-
-                                }
-                            }
-                        })
-                    }
-                }
-            })
-        </script>
-
-    </body>
-</div>
+</body>
 
 </html>
