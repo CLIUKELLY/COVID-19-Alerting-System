@@ -25,28 +25,28 @@
     <div class="container-fluid bg-light">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="q1-tab" data-bs-toggle="tab" data-bs-target="#q1" type="button" role="tab" aria-controls="q1" aria-selected="true">Q1</button>
+                <button class="nav-link active" id="q1-tab" data-bs-toggle="tab" data-bs-target="#q1" type="button" role="tab" aria-controls="q1" aria-selected="true">Person</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q2-tab" data-bs-toggle="tab" data-bs-target="#q2" type="button" role="tab" aria-controls="q2" aria-selected="false">Q2</button>
+                <button class="nav-link" id="q2-tab" data-bs-toggle="tab" data-bs-target="#q2" type="button" role="tab" aria-controls="q2" aria-selected="false">Public Health Worker</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q3-tab" data-bs-toggle="tab" data-bs-target="#q3" type="button" role="tab" aria-controls="q3" aria-selected="false">Q3</button>
+                <button class="nav-link" id="q3-tab" data-bs-toggle="tab" data-bs-target="#q3" type="button" role="tab" aria-controls="q3" aria-selected="false">Public Health Facility</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q4-tab" data-bs-toggle="tab" data-bs-target="#q4" type="button" role="tab" aria-controls="q4" aria-selected="false">Q4</button>
+                <button class="nav-link" id="q4-tab" data-bs-toggle="tab" data-bs-target="#q4" type="button" role="tab" aria-controls="q4" aria-selected="false">Region</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q5-tab" data-bs-toggle="tab" data-bs-target="#q5" type="button" role="tab" aria-controls="q5" aria-selected="false">Q5</button>
+                <button class="nav-link" id="q5-tab" data-bs-toggle="tab" data-bs-target="#q5" type="button" role="tab" aria-controls="q5" aria-selected="false">Group Zone</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q6-tab" data-bs-toggle="tab" data-bs-target="#q6" type="button" role="tab" aria-controls="q6" aria-selected="false">Q6</button>
+                <button class="nav-link" id="q6-tab" data-bs-toggle="tab" data-bs-target="#q6" type="button" role="tab" aria-controls="q6" aria-selected="false">Health Recommendation</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="q7-tab" data-bs-toggle="tab" data-bs-target="#q7" type="button" role="tab" aria-controls="q7" aria-selected="false">Q7</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q8-tab" data-bs-toggle="tab" data-bs-target="#q8" type="button" role="tab" aria-controls="q8" aria-selected="false">Q8</button>
+                <button class="nav-link" id="q8-tab" data-bs-toggle="tab" data-bs-target="#q8" type="button" role="tab" aria-controls="q8" aria-selected="false">Follow-up Form</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="q9-tab" data-bs-toggle="tab" data-bs-target="#q9" type="button" role="tab" aria-controls="q9" aria-selected="false">Q9</button>
@@ -76,7 +76,7 @@
                 <button class="nav-link" id="q17-tab" data-bs-toggle="tab" data-bs-target="#q17" type="button" role="tab" aria-controls="q17" aria-selected="false">Q17</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="q18-tab" data-bs-toggle="tab" data-bs-target="#q18" type="button" role="tab" aria-controls="q18" aria-selected="false">Q18</button>
+                <button class="nav-link" id="q18-tab" data-bs-toggle="tab" data-bs-target="#q18" type="button" role="tab" aria-controls="q18" aria-selected="false">Diagnose</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="q19-tab" data-bs-toggle="tab" data-bs-target="#q19" type="button" role="tab" aria-controls="q19" aria-selected="false">Q19</button>
@@ -114,8 +114,8 @@
                             <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
                         </div>
                         <div class="col">
-                            <label for="ppl_medNum">Medicare Number:</label><br>
-                            <input type="text" class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
+                            <label for="ppl_medNum">Medicare Number*:</label><br>
+                            <input type="text" required class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
                         </div>
                         <div class="col">
                             <label for="ppl_telNum">Tel*:</label><br>
@@ -157,6 +157,52 @@
                 <form class="mb-3">
                     <label for="ppl_id">Person ID*:</label><br>
                     <input type="number" required class="mb-3" id="ppl_id" name="ppl_id" min=1>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_fname">First name*:</label><br>
+                            <input type="text" required class="mb-3" id="ppl_fname" name="ppl_fname"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_lname">Last name*:</label><br>
+                            <input type="text" required class="mb-3" id="ppl_lname" name="ppl_lname"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_gender">Gender:</label><br>
+                            <input type="text" class="mb-3" id="ppl_gender" name="ppl_gender" placeholder="M/F" pattern="[M|F]"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_dob">Date of Birth*:</label><br>
+                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob" min="1900-01-01" max="2021-4-12"><br>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="ppl_citizenship">Citizenship:</label><br>
+                            <input type="text" class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_medNum">Medicare Number*:</label><br>
+                            <input type="text" required class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_telNum">Tel*:</label><br>
+                            <input type="text" required class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
+                        </div>
+                        <div class="col">
+                            <label for="ppl_email">Email:</label><br>
+                            <input type="email" class="mb-3" id="ppl_email" name="ppl_email"><br>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="Mparent">Mother ppl_id:</label><br>
+                            <input type="number" class="mb-3" id="Mparent" name="Mparent" min=1><br>
+                        </div>
+                        <div class="col">
+                            <label for="Fparent">Father ppl_id:</label><br>
+                            <input type="number" class="mb-3" id="Fparent" name="Fparent" min=1><br>
+                        </div>
+                    </div>
                     <input type="submit" value="Edit">
                 </form>
             </div>
@@ -188,7 +234,9 @@
                 <h2>Edit a Public Health Worker</h2>
                 <form class="mb-3">
                     <label for="employee_id">Employee ID*:</label><br>
-                    <input type="number" required class="mb-3" id="employee_id" name="employee_id" min=1>
+                    <input type="number" required class="mb-3" id="employee_id" name="employee_id" min=1><br>
+                    <label for="ppl_id">Person ID:</label><br>
+                    <input type="number" class="mb-3" id="ppl_id" name="ppl_id" min=1><br>
                     <input type="submit" value="Edit">
                 </form>
             </div>
@@ -256,6 +304,43 @@
                 <form class="mb-3">
                     <label for="phf_id">Facility ID:</label><br>
                     <input type="number" required class="mb-3" id="phf_id" name="phf_id" min=1>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="phf_phoneNum">Tel*:</label><br>
+                            <input type="text" required class="mb-3" id="phf_phoneNum" name="phf_phoneNum"><br>
+                        </div>
+                        <div class="col">
+                            <label for="phf_webAddress">Web Address:</label><br>
+                            <input type="text" class="mb-3" id="phf_webAddress" name="phf_webAddress"><br>
+                        </div>
+                        <div class="col">
+                            <label for="phf_type">Facility Type:</label><br>
+                            <select id="phf_type" name="phf_type">
+                                <option value="Clinique">Clinique</option>
+                                <option value="Hospital">Hospital</option>
+                                <option value="Dental">Dental</option>
+                              </select><br>
+                        </div>
+                        <div class="col">
+                            <label for="phf_name">Facility Name*:</label><br>
+                            <input type="text" required class="mb-3" id="phf_name" name="phf_name"><br>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="phf_pcrDriveThru">PCR Drive Thru Provided*:</label>
+                            <input type="radio" required class="mb-3" id="phf_pcrDriveThru" name="phf_pcrDriveThru"> yes
+                            <input type="radio" required class="mb-3" id="phf_pcrDriveThru" name="phf_pcrDriveThru"> no<br>
+                        </div>
+                        <div class="col">
+                            <label for="phf_visitWay">Choose a Vist Way:</label>
+                            <select id="phf_visitWay" name="phf_visitWay">
+                                <option value="walk-in">walk-in</option>
+                                <option value="by appointment">by appointment</option>
+                                <option value="both">both</option>
+                              </select><br>
+                        </div>
+                    </div>
                     <input type="submit" value="Display">
                 </form>
             </div>
@@ -276,19 +361,21 @@
                     <input type="number" required class="mb-3" id="region_id" name="region_id" min=1>
                     <input type="submit" value="Delete">
                 </form>
-                <!--Q4 Edit a Region-->
-                <h2>Edit a Region</h2>
-                <form class="mb-3">
-                    <label for="region_id">Region ID*:</label><br>
-                    <input type="number" required class="mb-3" id="region_id" name="region_id" min=1>
-                    <input type="submit" value="Edit">
-                </form>
                 <!--Q4 Display a Region-->
                 <h2>Display a Region</h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID*:</label><br>
                     <input type="number" required class="mb-3" id="region_id" name="region_id" min=1>
                     <input type="submit" value="Display">
+                </form>
+                <!--Q4 Edit a Region-->
+                <h2>Edit a Region</h2>
+                <form class="mb-3">
+                    <label for="region_id">Region ID*:</label><br>
+                    <input type="number" required class="mb-3" id="region_id" name="region_id" min=1><br>
+                    <label for="region_name">Region Name*:</label><br>
+                    <input type="text" required class="mb-3" id="region_name" name="region_name"><br>
+                    <input type="submit" value="Edit">
                 </form>
             </div>
             <!--Q5 Create/Delete/Edit/Display a Group Zone-->
@@ -297,10 +384,16 @@
                 <!--Q5 Create a Group Zone-->
                 <h2>Create a Group Zone</h2>
                 <form class="mb-3">
-                    <label for="gz_name">Group Zone Name:</label><br>
-                    <input type="text" class="mb-3" id="gz_name" name="gz_name"><br>
-                    <label for="gz_type">Group Zone Type:</label><br>
-                    <input type="text" class="mb-3" id="gz_type" name="gz_type"><br>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="gz_name">Group Zone Name:</label><br>
+                            <input type="text" class="mb-3" id="gz_name" name="gz_name"><br>
+                        </div>
+                        <div class="col">
+                            <label for="gz_type">Group Zone Type:</label><br>
+                            <input type="text" class="mb-3" id="gz_type" name="gz_type"><br>
+                        </div>
+                    </div>
                     <input type="submit" value="Create">
                 </form>
                 <!--Q5 Delete a Group Zone-->
@@ -310,19 +403,29 @@
                     <input type="number" required class="mb-3" id="gz_id" name="gz_id" min=1>
                     <input type="submit" value="Delete">
                 </form>
-                <!--Q5 Edit a Group Zone-->
-                <h2>Edit a Group Zone</h2>
-                <form class="mb-3">
-                    <label for="gz_id">Employee ID*:</label><br>
-                    <input type="number" required class="mb-3" id="gz_id" name="gz_id" min=1>
-                    <input type="submit" value="Edit">
-                </form>
                 <!--Q5 Display a Group Zone-->
                 <h2>Display a Group Zone</h2>
                 <form class="mb-3">
                     <label for="gz_id">Group Zone ID*:</label><br>
                     <input type="number" required class="mb-3" id="gz_id" name="gz_id" min=1>
                     <input type="submit" value="Display">
+                </form>
+                <!--Q5 Edit a Group Zone-->
+                <h2>Edit a Group Zone</h2>
+                <form class="mb-3">
+                    <label for="gz_id">Employee ID*:</label><br>
+                    <input type="number" required class="mb-3" id="gz_id" name="gz_id" min=1><br>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <label for="gz_name">Group Zone Name:</label><br>
+                            <input type="text" class="mb-3" id="gz_name" name="gz_name"><br>
+                        </div>
+                        <div class="col">
+                            <label for="gz_type">Group Zone Type:</label><br>
+                            <input type="text" class="mb-3" id="gz_type" name="gz_type"><br>
+                        </div>
+                    </div>
+                    <input type="submit" value="Edit">
                 </form>
             </div>
             <!--Q6 Create/Delete/Edit/Display a Public Health Recomendation-->
@@ -343,7 +446,11 @@
                 <h2>Edit a Health Recommendation</h2>
                 <form class="mb-3">
                     <label for="info_id">Recommendation ID*:</label><br>
-                    <input type="number" required class="mb-3" id="info_id" name="info_id" min=1>
+                    <input type="number" required class="mb-3" id="info_id" name="info_id" min=1><br>
+                    <label for="description">Description:</label><br>
+                    <textarea type="text" class="mb-3" rows="5" cols="80" id="description" name="description"> </textarea><br>
+                    <label for="info_type">Recommendation Type:</label><br>
+                    <input type="text" class="mb-3" id="info_type" name="info_type"><br>
                     <input type="submit" value="Edit">
                 </form>
             </div>
@@ -353,8 +460,10 @@
                 <h2></h2>
                 <form class="mb-3">
                     <label for="region_id">Region ID:</label><br>
-                    <input type="text" required class="mb-3" id="region_id" name="region_id"><br>
-                    <button class="btn-create">Create</button>
+                    <input type="number" required class="mb-3" id="region_id" name="region_id" min=1><br>
+                    <label for="region_id">Region ID:</label><br>
+                    <input type="number" required class="mb-3" id="region_id" name="region_id" min=1><br>
+                    <input type="submit" value="Create">
                 </form>
             </div>
             <!--Q8 followup form-->
@@ -365,12 +474,8 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="employee_id">Employee ID:</label><br>
-                            <input type="text" required class="mb-3" id="employee_id" name="employee_id"><br>
-                        </div>
-                        <div class="col">
-                            <label for="startTime">Date and Time:</label><br>
-                            <input type="datetime-local" required class="mb-3" id="startTime" name="startTime"><br>
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" required class="mb-3" id="ppl_id" name="ppl_id" min=1>
                         </div>
                         <div class="col">
                             <label for="temperature">Temperature (celsius):</label><br>
@@ -398,14 +503,14 @@
                     <input type="checkbox" class="mb-3" id="other_headache" name="other_headache">
                     <label for="other_headache">headache</label>
                     <input type="checkbox" class="mb-3" id="other_musclePain" name="other_musclePain">
-                    <label for="other_musclePain">musclePain</label>
+                    <label for="other_musclePain">muscle pain</label>
                     <input type="checkbox" class="mb-3" id="other_diarrhea" name="other_diarrhea">
                     <label for="other_diarrhea">diarrhea</label>
                     <input type="checkbox" class="mb-3" id="other_soreThroat" name="other_soreThroat">
-                    <label for="other_soreThroat">soreThroat</label>
+                    <label for="other_soreThroat">sore throat</label>
                     <br><label for="non-Specified Symptom">Other Non-Specified Symptom:</label><br>
                     <textarea type="text" class="mb-3" rows="5" cols="80" id="non-Specified Symptom" name="non-Specified Symptom"> </textarea><br>
-                    <button class="btn-submit">Submit</button>
+                    <input type="submit">
                 </form>
             </div>
             <!--Q9 Progress of symptoms-->
@@ -424,7 +529,7 @@
                             <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob" min="1900-01-01" max="2021-4-12"><br>
                         </div>
                     </div>
-                    <button class="btn-create">Check</button>
+                    <input type="submit" value="Check">
                 </form>
             </div>
             <!--Q10 Dsiplay message-->
@@ -442,7 +547,7 @@
                             <input type="datetime-local" required class="mb-3" id="date_time" name="date_time"><br>
                         </div>
                     </div>
-                    <button class="btn-display">Display All Message</button>
+                    <input type="submit" value="Display All Message">
                 </form>
             </div>
             <!--Q11 Give a list of people-->
@@ -453,49 +558,11 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="ppl_fname">First name:</label><br>
+                            <label for="pc_address">Address:</label><br>
                             <input type="text" required class="mb-3" id="ppl_fname" name="ppl_fname"><br>
                         </div>
-                        <div class="col">
-                            <label for="ppl_lname">Last name:</label><br>
-                            <input type="text" required class="mb-3" id="ppl_lname" name="ppl_lname"><br>
-                        </div>
-                        <div class="col">
-                            <label for="ppl_dob">Date of Birth:</label><br>
-                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob" min="1900-01-01" max="2021-4-12"><br>
-                        </div>
-                        <div class="col">
-                            <label for="ppl_medNum">Medicare Number:</label><br>
-                            <input type="text" required class="mb-3" id="ppl_medNum" name="ppl_medNum"><br>
-                        </div>
                     </div>
-                    <div class="row align-items-start">
-                        <div class="col">
-                            <label for="ppl_telNum">Tel:</label><br>
-                            <input type="text" required class="mb-3" id="ppl_telNum" name="ppl_telNum"><br>
-                        </div>
-                        <div class="col">
-                            <label for="ppl_citizenship">Citizenship:</label><br>
-                            <input type="text" required class="mb-3" id="ppl_citizenship" name="ppl_citizenship"><br>
-                        </div>
-                        <div class="col">
-                            <label for="ppl_email">Email:</label><br>
-                            <input type="email" class="mb-3" id="ppl_email" name="ppl_email"><br>
-                        </div>
-                    </div>
-                    <div class="row align-items-start">
-                        <!--不确定-->
-                        <div class="col">
-                            <label for="Mparent">Mother Full Name (First Name + Last Name):</label><br>
-                            <input type="text" class="mb-3" id="Mparent" name="Mparent" cols="80"><br>
-                        </div>
-                        <!--不确定-->
-                        <div class="col">
-                            <label for="Fparent">Mother Full Name (First Name + Last Name):</label><br>
-                            <input type="text" class="mb-3 col-lg-1" id="Fparent" name="Fparent"><br>
-                        </div>
-                    </div>
-                    <button class="btn-create">Search</button>
+                    <input type="submit" value="Search">
                 </form>
 
             </div>
@@ -504,7 +571,7 @@
                 <h1>Q12 Give a detail list of all facilities.
                 </h1>
                 <form class="mb-3">
-                    <button class="btn-display-facilities">Display facilities</button>
+                    <input type="submit" value="Display facilities">
                 </form>
             </div>
             <!--Q13-->
@@ -512,33 +579,19 @@
                 <h1>Q13 Give a detail list of all Regions (Name, list of all cities within the region, and a list of all the postal codes within every city).
                 </h1>
                 <form class="mb-3">
-                    <button class="btn-display-facilities">Display Regions and Postalcodes</button>
+                    <input type="submit" value="Display Regions and Postalcodes">
                 </form>
             </div>
             <!--Q14-->
             <div class="tab-pane fade" id="q14" role="tabpanel" aria-labelledby="q14-tab">
                 <h1>Q14 Give a List of all people who got the result of the test on a specific date.
                 </h1>
-                <<<<<<< Updated upstream <h2>
-                    </h2>
-                    <form class="mb-3">
-                        <label for="ppl_dob">Date:</label><br>
-                        <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob" required><br>
-                        <button>Search</button>
-                    </form>
-                    =======
-                    <div class="tab-pane fade" id="q9" role="tabpanel" aria-labelledby="q9-tab">
-                        <h1>Q9 Check a detail progress of all the symptoms.
-                        </h1>
-                        <h2></h2>
-                        <form class="mb-3">
-                            <label for="ppl_dob">Date:</label><br>
-                            <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob" min="1900-01-01" max="2021-4-12"><br>
-                            <button class="btn-create">Check</button>
-                        </form>
-                    </div>
-
-                    >>>>>>> Stashed changes
+                <h2></h2>
+                <form class="mb-3">
+                    <label for="ppl_dob">Date:</label><br>
+                    <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob" required><br>
+                    <input type="submit" value="Search">
+                </form>
             </div>
             <!--Q15-->
             <div class="tab-pane fade" id="q15" role="tabpanel" aria-labelledby="q15-tab">
@@ -547,7 +600,7 @@
                 <form class="mb-3">
                     <label for="phf_id">Public Health Facility ID:</label><br>
                     <input type="number" class="mb-3" id="phf_id" name="phf_id" oninput="if(value<1)value=1" required><br>
-                    <button>Search</button>
+                    <input type="submit" value="Search">
                 </form>
             </div>
             <!--Q16-->
@@ -565,9 +618,11 @@
                             <input type="number" class="mb-3" id="phf_id" name="phf_id" oninput="if(value<1)value=1" required><br>
                         </div>
                     </div>
-                    <button class="mb-3">Search</button>
+                    <input type="submit" value="Search">
+                </form>
+                <form class="mb-3">
                     <h2>List of Employees Who Worked with Infected Health Workers for 14 Days Prior to The Test</h2>
-                    <button class="mb-3">Search</button>
+                    <input type="submit" value="Search">
                 </form>
             </div>
             <!--Q17-->
@@ -585,75 +640,75 @@
                             <input type="datetime-local" class="mb-3" id="endDateTime" name="endDateTime" required><br>
                         </div>
                     </div>
-                    <button class="mb-3">Generate</button>
+                    <input type="submit" value="Generate">
                 </form>
             </div>
-            <!--Q18-->
+            <!--Q18 Create/Delete/Edit/Display a Diagnose-->
             <div class="tab-pane fade" id="q18" role="tabpanel" aria-labelledby="q18-tab">
                 <h1>Q18 Create/Delete/Edit/Display a Diagnose</h1>
                 <h2>Create a Diagnose</h2>
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="ppl_id">Person ID:</label><br>
-                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required min=1><br>
                         </div>
                         <div class="col">
-                            <label for="employee_id">Employee ID:</label><br>
-                            <input type="number" class="mb-3" id="employee_id" name="employee_id" required><br>
+                            <label for="employee_id">Employee ID*:</label><br>
+                            <input type="number" class="mb-3" id="employee_id" name="employee_id" required min=1><br>
                         </div>
                         <div class="col">
-                            <label for="testDate">Test Date:</label><br>
+                            <label for="testDate">Test Date*:</label><br>
                             <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
                         </div>
                         <div class="col">
-                            <label for="testLocation">Public Health Facility ID:</label><br>
-                            <input type="number" class="mb-3" id="testLocation" name="testLocation" required><br>
+                            <label for="testLocation">Public Health Facility ID*:</label><br>
+                            <input type="number" class="mb-3" id="testLocation" name="testLocation" required min=1><br>
                         </div>
                     </div>
-                    <button class="btn-create">Create</button>
+                    <input type="submit" value="Create">
                 </form>
                 <h2>Delete a Diagnose</h2>
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="ppl_id">Person ID:</label><br>
-                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required min=1><br>
                         </div>
                         <div class="col">
-                            <label for="testDate">Test Date:</label><br>
+                            <label for="testDate">Test Date*:</label><br>
                             <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
                         </div>
                     </div>
-                    <button class="btn-delete">Delete</button>
+                    <input type="submit" value="Delete">
                 </form>
                 <h2>Display a Diagnose</h2>
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_id">Person ID:</label><br>
-                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required min=1><br>
                         </div>
                         <div class="col">
                             <label for="testDate">Test Date:</label><br>
                             <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
                         </div>
                     </div>
-                    <button class="btn-display">Display</button>
+                    <input type="submit" value="Display">
                 </form>
                 <h2>Edit a Diagnose</h2>
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
                             <label for="ppl_id">Person ID:</label><br>
-                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required min=1><br>
                         </div>
                         <div class="col">
                             <label for="testDate">Test Date:</label><br>
                             <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
                         </div>
                     </div>
-                    <button class="btn-edit">Edit</button>
+                    <input type="submit" value="Edit">
                 </form>
             </div>
             <!--Q19-->
@@ -662,15 +717,15 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="region_id">Region ID:</label><br>
+                            <label for="region_id">Region ID*:</label><br>
                             <input type="number" class="mb-3" id="region_id" name="region_id" oninput="if(value<1)value=1" required><br>
                         </div>
                         <div class="col">
-                            <label for="alert_level">Alert Level:</label><br>
+                            <label for="alert_level">Alert Level*:</label><br>
                             <input type="number" class="mb-3" id="alert_level" name="alert_level" oninput="if(value>4)value=4;if(value<1)value=1" required><br>
                         </div>
                     </div>
-                    <button class="btn-create">Change</button>
+                    <input type="submit" value="Change">
                 </form>
             </div>
         </div>
