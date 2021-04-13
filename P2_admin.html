@@ -459,11 +459,11 @@
                 <h1>Q7 Set a new alert for a specific region.</h1>
                 <h2></h2>
                 <form class="mb-3">
-                    <label for="region_id">Region ID:</label><br>
+                    <label for="region_id">Region ID*:</label><br>
                     <input type="number" required class="mb-3" id="region_id" name="region_id" min=1><br>
-                    <label for="region_id">Region ID:</label><br>
-                    <input type="number" required class="mb-3" id="region_id" name="region_id" min=1><br>
-                    <input type="submit" value="Create">
+                    <label for="alert_level">Alert Level*:</label><br>
+                    <input type="number" required class="mb-3" id="alert_level" name="alert_level" min=1 max=4><br>
+                    <input type="submit" value="Set">
                 </form>
             </div>
             <!--Q8 followup form-->
@@ -479,7 +479,7 @@
                         </div>
                         <div class="col">
                             <label for="temperature">Temperature (celsius):</label><br>
-                            <input type="text" class="mb-3" required id="temperature" name="temperature"><br>
+                            <input type="number" step="0.1" class="mb-3" required id="temperature" name="temperature" min=35 max=43><br>
                         </div>
                     </div>
 
@@ -521,11 +521,11 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="ppl_id">Person ID:</label><br>
-                            <input type="text" required class="mb-3" id="ppl_id" name="ppl_id"><br>
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" required class="mb-3" id="ppl_id" name="ppl_id" min=1><br>
                         </div>
                         <div class="col">
-                            <label for="ppl_dob">Date:</label><br>
+                            <label for="ppl_dob">Date*:</label><br>
                             <input type="date" required class="mb-3" id="ppl_dob" name="ppl_dob" min="1900-01-01" max="2021-4-12"><br>
                         </div>
                     </div>
@@ -539,12 +539,12 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="date_time">From:</label><br>
-                            <input type="datetime-local" required class="mb-3" id="date_time" name="date_time"><br>
+                            <label for="start_datetime">From*:</label><br>
+                            <input type="datetime-local" required class="mb-3" id="start_datetime" name="start_datetime"><br>
                         </div>
                         <div class="col">
-                            <label for="date_time">To:</label><br>
-                            <input type="datetime-local" required class="mb-3" id="date_time" name="date_time"><br>
+                            <label for="end_datetime">To*:</label><br>
+                            <input type="datetime-local" required class="mb-3" id="end_datetime" name="end_datetime"><br>
                         </div>
                     </div>
                     <input type="submit" value="Display All Message">
@@ -552,13 +552,13 @@
             </div>
             <!--Q11 Give a list of people-->
             <div class="tab-pane fade" id="q11" role="tabpanel" aria-labelledby="q11-tab">
-                <h1>Q11 Give a list of all the People in a specific address. For every person, provide the first name, last name, DOB, medicare card number, telephone number, citizenship, email address, full mother’s name and full father’s name.
+                <h1>Q11 Give a list of all the People in a specific address.
                 </h1>
                 <h2></h2>
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="pc_address">Address:</label><br>
+                            <label for="pc_address">Address*:</label><br>
                             <input type="text" required class="mb-3" id="ppl_fname" name="ppl_fname"><br>
                         </div>
                     </div>
@@ -576,7 +576,7 @@
             </div>
             <!--Q13-->
             <div class="tab-pane fade" id="q13" role="tabpanel" aria-labelledby="q13-tab">
-                <h1>Q13 Give a detail list of all Regions (Name, list of all cities within the region, and a list of all the postal codes within every city).
+                <h1>Q13 Give a detail list of all Regions.
                 </h1>
                 <form class="mb-3">
                     <input type="submit" value="Display Regions and Postalcodes">
@@ -588,8 +588,8 @@
                 </h1>
                 <h2></h2>
                 <form class="mb-3">
-                    <label for="ppl_dob">Date:</label><br>
-                    <input type="date" class="mb-3" id="ppl_dob" name="ppl_dob" required><br>
+                    <label for="resultDate">Date:</label><br>
+                    <input type="date" class="mb-3" id="resultDate" name="resultDate" required><br>
                     <input type="submit" value="Search">
                 </form>
             </div>
@@ -700,12 +700,29 @@
                 <form class="mb-3">
                     <div class="row align-items-start">
                         <div class="col">
-                            <label for="ppl_id">Person ID:</label><br>
-                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" required min=1><br>
+                            <label for="ppl_id">Person ID*:</label><br>
+                            <input type="number" class="mb-3" id="ppl_id" name="ppl_id" min=1 required><br>
+                        </div>
+                        <div class="col">
+                            <label for="employee_id">Employee ID:</label><br>
+                            <input type="number" class="mb-3" id="employee_id" name="employee_id" min=1><br>
                         </div>
                         <div class="col">
                             <label for="testDate">Test Date:</label><br>
-                            <input type="date" class="mb-3" id="testDate" name="testDate" required><br>
+                            <input type="date" class="mb-3" id="testDate" name="testDate"><br>
+                        </div>
+                        <div class="col">
+                            <label for="testLocation">Public Health Facility ID:</label><br>
+                            <input type="number" class="mb-3" id="testLocation" name="testLocation" min=1><br>
+                        </div>
+                        <div class="col">
+                            <label for="testResult">PCR Test Result:</label><br>
+                            <input type="radio" class="mb-3" id="testResult" name="testResult">Positive
+                            <input type="radio" class="mb-3" id="testResult" name="testResult">Negative<br>
+                        </div>
+                        <div class="col">
+                            <label for="resultDate">PCR Test Result Date:</label><br>
+                            <input type="datetime-local" class="mb-3" id="resultDate" name="resultDate"><br>
                         </div>
                     </div>
                     <input type="submit" value="Edit">
